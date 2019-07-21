@@ -1,9 +1,9 @@
-$(functionc(){
+$(function(){
     $('#js-shopping-list-form').submit(function(event) {
         event.preventDefault();
         const listItem = $('#shopping-list-entry').val();
         $('#shopping-list-entry').val('');
-        $('shopping-list').append(
+        $('.shopping-list').append(
             <li>
             <span class="shopping-item">${listItem}</span>
             <div class="shopping-item-controls">
@@ -20,7 +20,7 @@ $(functionc(){
     $('.shopping-list').on('click','shopping-item-delete', function(event) {
         $(this).closest('li').remove();
     });
-    $('shopping-list').on('click','shopping-item-toggle', function(event){
+    $('.shopping-list').on('click','shopping-item-toggle', function(event){
         $(this).closest(li).find('.shopping-item').toggleClass('.shopping-item__checked')
     });
 });
